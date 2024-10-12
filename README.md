@@ -29,6 +29,9 @@ BERTopic wird dann mit den einzelnen Modellen gefüllt und berechnet.
 
 
 # Finales Modell:
+
+![topics](topics_data4_gut.png)
+
 {'calculate_probabilities': True,
  'ctfidf_model': ClassTfidfTransformer(),
  'embedding_model': <bertopic.backend._sentencetransformers.SentenceTransformerBackend at 0x7cbbcaf86770>,
