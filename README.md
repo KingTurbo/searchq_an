@@ -18,8 +18,6 @@ Die Library "ecommercetools" funktioniert so nicht mehr, allerdings die einzelne
 
 eyewear_keywords_de beinhaltet keywords, die passend zum Thema "Brille" selektiert wurden. Diese durchlaufen alle die vorher erwähnten Schritte.
 
-Aus den Resulaten werden Fragewörter und das Keyword selbst entfernt. Grund: Wenn keyword nicht gelöscht wird, wird nach bestimmter n-Anzahl nur nach dem keyword selbst gruppiert (was nicht sinn und zweck ist). Selbiges mit den Fragenwörter ("wie", "was", usw.) = Man könnte zwar aus api löschen, würde aber zu Qualitätsverlust führen,
-
 Alle suggestions df werden in eine Liste gepackt und zusammengefügt.
 
 UMAP und HDBSCAN sind beides clustering algorythmen. 
