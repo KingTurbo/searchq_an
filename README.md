@@ -1,4 +1,3 @@
-# searchq_an
 # Google-Abfrage (Data-Collecting)
 1. **API-Aufruf**: Google Suggest API über die URL `https://suggestqueries.google.com/complete/search?output=toolbar&hl=de&q=schärding` für deutsche Ergebnisse (URL von "en" auf "de" geändert).
     
@@ -18,6 +17,7 @@ Die Library "ecommercetools" funktioniert so nicht mehr, allerdings die einzelne
 
 eyewear_keywords_de beinhaltet keywords, die passend zum Thema "Brille" selektiert wurden. Diese durchlaufen alle die vorher erwähnten Schritte.
 
+
 Alle suggestions df werden in eine Liste gepackt und zusammengefügt.
 
 UMAP und HDBSCAN sind beides clustering algorythmen. 
@@ -28,11 +28,9 @@ CountVectorizer(ngram_range=(1, 2), stop_words=stopwords) zählt Häufigkeit von
 BERTopic wird dann mit den einzelnen Modellen gefüllt und berechnet. 
 
 
-# Finales Modell:
+## Das finale Modell
 
-![topics](topics_data4_gut.png)
-
-{'calculate_probabilities': True,
+``` {'calculate_probabilities': True,
  'ctfidf_model': ClassTfidfTransformer(),
  'embedding_model': <bertopic.backend._sentencetransformers.SentenceTransformerBackend at 0x7cbbcaf86770>,
  'hdbscan_model': HDBSCAN(gen_min_span_tree=True, min_cluster_size=10, min_samples=5,
@@ -55,8 +53,9 @@ BERTopic wird dann mit den einzelnen Modellen gefüllt und berechnet.
                              'damit', 'dann', ...]),
  'verbose': True,
  'zeroshot_min_similarity': 0.7,
- 'zeroshot_topic_list': None}
+ 'zeroshot_topic_list': None} 
+ ```
+
 
 Mit diesen Parametern wurde mit data4 das beste Ergebnis erzielt.
 Entscheident dabei war,: (min_cluster_size=10, min_samples=5) und nur search request mit dem keywort "brille" alleine
-
